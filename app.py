@@ -20,9 +20,9 @@ def index():
 
 @app.route('/vfeed/api/cve/<cve_id>', methods=['GET'])
 def get_cve_detail(cve_id):
-    return CveInfo(cve).get_cve()
+    return CveInfo(cve_id).get_cve()
 
-@app.route('vfeed/api/cpe/<cpe_id>', methods=['GET'])
+@app.route('/vfeed/api/cpe/<cpe_id>', methods=['GET'])
 def get_cpe(cpe):
     return Search(cpe).cpe()
 
